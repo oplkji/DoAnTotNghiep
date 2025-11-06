@@ -8,7 +8,7 @@
 #define LORA_TX 13
 #define LORA_RX 14
 
-void LoRasetup(){
+void LoRaSetup(){
     pinMode(M0, OUTPUT);
     pinMode(M1, OUTPUT);
     digitalWrite(M0, LOW);

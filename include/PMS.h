@@ -19,7 +19,7 @@ PMS::DATA data;
 void setup() {
 
   Serial.begin(115200);
-  pmsSerial.begin(PMS::baudRate SERIAL_8N1, PMS_RX, PMS_TX);
+  pmsSerial.begin(PMS::baudRate, SERIAL_8N1, PMS_RX, PMS_TX);
   
 
 
@@ -43,7 +43,8 @@ void loop() {
 
 #include <Arduino.h>
 #include <Stream.h>
-
+#define PMS_RX 16
+#define PMS_TX 17
 class PMS {
 public:
     static const uint16_t baudRate = 9600;
