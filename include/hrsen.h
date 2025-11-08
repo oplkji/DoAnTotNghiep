@@ -5,15 +5,15 @@
 
 const int trig = 25;
 const int echo = 26;
+unsigned long duration;
+int distance;
 
 void HrsenSetup(){
     pinMode(trig, OUTPUT);
     pinMode(echo, INPUT);
 }
 
-int distance(){
-    unsigned long duration;
-    int distance;
+int getDistance(){
     digitalWrite(trig, 0);
     delayMicroseconds(2);
     digitalWrite(trig, 1); 
